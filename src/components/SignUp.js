@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./SignUp.css"; // Import the CSS file for styling
+import { useNavigate } from "react-router-dom";
 
 const SignUp = ({ handleSignUp }) => {
   const [email, setEmail] = useState("");
@@ -8,9 +9,11 @@ const SignUp = ({ handleSignUp }) => {
   const [surname, setSurname] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
 
+  const navigate = useNavigate(); 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleSignUp({ name, surname, email, phoneNumber });
+    navigate('/todomain'); 
+    // handleSignUp({ name, surname, email, phoneNumber });
   };
 
   return (

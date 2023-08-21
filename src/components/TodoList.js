@@ -15,6 +15,8 @@ const TodoList = ({ todos, handleEdit, handleDelete }) => {
     
   };
 
+  console.log(filteredTodos)
+
   return (
     <div className="todo-list">
       <h2>Task List</h2>
@@ -32,7 +34,7 @@ const TodoList = ({ todos, handleEdit, handleDelete }) => {
         </select>
         <button onClick={applyFilter}>Apply</button>
       </div>
-      {filteredTodos.map((todo) => (
+      {/* {filteredTodos.map((todo) => (
         <div key={todo.id} className="task">
           <h3>{todo.title}</h3>
           
@@ -41,7 +43,7 @@ const TodoList = ({ todos, handleEdit, handleDelete }) => {
             <button onClick={() => handleDelete(todo.id)}>Delete</button>
           </div>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };

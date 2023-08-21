@@ -12,7 +12,7 @@ const TodoForm = ({ handleSubmit, todo, editId, setTodo }) => {
           <input
             type="text"
             id="title"
-            value={todo.title}
+            value={'todo.title'}
             onChange={(e) => setTodo({ ...todo, title: e.target.value })}
             required
           />
