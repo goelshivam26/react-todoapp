@@ -12,7 +12,7 @@ const SignUp = ({ handleSignUp }) => {
   const navigate = useNavigate(); 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/todomain'); 
+    navigate('/login'); 
     // handleSignUp({ name, surname, email, phoneNumber });
   };
 

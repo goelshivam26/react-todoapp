@@ -3,6 +3,10 @@ import React, { useState } from "react";
 const TodoForm = ({ handleSubmit, todo, editId, setTodo }) => {
   const labelOptions = ["Personal", "Work", "Home", "Errands"]; // Add your label options here
 
+  // const handleSubmit = () => {
+  //   e.preventDefault(); 
+  // }
+
   return (
     <div className="todo-form">
       <h2>{editId ? "Edit Task" : "Add New Task"}</h2>
@@ -12,7 +16,7 @@ const TodoForm = ({ handleSubmit, todo, editId, setTodo }) => {
           <input
             type="text"
             id="title"
-            value={'todo.title'}
+            // value={'todo.title'}
             onChange={(e) => setTodo({ ...todo, title: e.target.value })}
             required
           />
@@ -21,7 +25,7 @@ const TodoForm = ({ handleSubmit, todo, editId, setTodo }) => {
           <label htmlFor="description">Description:</label>
           <textarea
             id="description"
-            value={todo.description}
+            // value={'todo.description'}
             onChange={(e) => setTodo({ ...todo, description: e.target.value })}
           />
         </div>
@@ -30,7 +34,7 @@ const TodoForm = ({ handleSubmit, todo, editId, setTodo }) => {
           <input
             type="date"
             id="dueDate"
-            value={todo.dueDate}
+            // value={'todo.dueDate'}
             onChange={(e) => setTodo({ ...todo, dueDate: e.target.value })}
           />
         </div>
@@ -38,7 +42,7 @@ const TodoForm = ({ handleSubmit, todo, editId, setTodo }) => {
           <label htmlFor="priority">Priority:</label>
           <select
             id="priority"
-            value={todo.priority}
+            // value={todo.priority}
             onChange={(e) => setTodo({ ...todo, priority: e.target.value })}
           >
             <option value="low">Low</option>
@@ -50,7 +54,7 @@ const TodoForm = ({ handleSubmit, todo, editId, setTodo }) => {
           <label htmlFor="labels">Labels:</label>
           <select
             id="labels"
-            value={todo.labels}
+            // value={todo.labels}
             onChange={(e) => setTodo({ ...todo, labels: e.target.value })}
           >
             <option value="">Select a Label</option>
